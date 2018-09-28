@@ -8,8 +8,6 @@ class Robot
   RIGHT = 'RIGHT'
   LEFT = 'LEFT'
 
-  attr_accessor :direction, :x, :y, :xedge, :yedge
-
   def initialize(faceto = 'NORTH', x = 0, y = 0, xedge, yedge)
     @xedge = xedge
     @yedge = yedge
@@ -23,11 +21,11 @@ class Robot
       when 'NORTH'
         ((@y - 1) >= 0) ? @y -= 1 : (p 'CAREFUL! edge')
       when 'EAST'
-      	((@x + 1) <= @xedge) ? @x += 1 : (p 'CAREFUL! edge')
+        ((@x + 1) <= @xedge) ? @x += 1 : (p 'CAREFUL! edge')
       when 'SOUTH'
         ((@y + 1) <= @yedge) ? @y += 1 : (p 'CAREFUL! edge')
       when 'WEST'
-      	((@x - 1) >= 0) ? @x -= 1 : (p 'CAREFUL! edge')
+        ((@x - 1) >= 0) ? @x -= 1 : (p 'CAREFUL! edge')
     end
   end
 

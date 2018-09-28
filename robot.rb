@@ -24,11 +24,11 @@ class Robot
       when 'NORTH'
         ((@y - 1) >= 0) ? @y -= 1 : (p 'CAREFUL! edge')
       when 'EAST'
-      	((@x + 1) <= XEDGE[0]) ? @x += 1 : (p 'CAREFUL! edge')
+        ((@x + 1) <= XEDGE[0]) ? @x += 1 : (p 'CAREFUL! edge')
       when 'SOUTH'
         ((@y + 1) <= XEDGE[0]) ? @y += 1 : (p 'CAREFUL! edge')
       when 'WEST'
-      	((@x - 1) >= 0) ? @x -= 1 : (p 'CAREFUL! edge')
+        ((@x - 1) >= 0) ? @x -= 1 : (p 'CAREFUL! edge')
     end
   end
 
